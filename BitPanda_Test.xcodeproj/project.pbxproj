@@ -9,21 +9,51 @@
 /* Begin PBXBuildFile section */
 		0DA59A9E2721D74D00667D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59A9D2721D74D00667D62 /* AppDelegate.swift */; };
 		0DA59AA02721D74D00667D62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59A9F2721D74D00667D62 /* SceneDelegate.swift */; };
-		0DA59AA22721D74D00667D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AA12721D74D00667D62 /* ViewController.swift */; };
+		0DA59AA22721D74D00667D62 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AA12721D74D00667D62 /* AssetsViewController.swift */; };
 		0DA59AA52721D74D00667D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59AA32721D74D00667D62 /* Main.storyboard */; };
 		0DA59AA72721D75100667D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59AA62721D75100667D62 /* Assets.xcassets */; };
 		0DA59AAA2721D75100667D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59AA82721D75100667D62 /* LaunchScreen.storyboard */; };
+		0DA59AB22721D75800667D62 /* Mastrerdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59AB12721D75800667D62 /* Mastrerdata.json */; };
+		0DA59AB42721D7A300667D62 /* MasterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AB32721D7A300667D62 /* MasterData.swift */; };
+		0DA59AB72721D7DC00667D62 /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AB62721D7DC00667D62 /* DataClass.swift */; };
+		0DA59ABB2721D80800667D62 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59ABA2721D80800667D62 /* Asset.swift */; };
+		0DA59ABF2721D84800667D62 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59ABE2721D84800667D62 /* Enums.swift */; };
+		0DA59AC12721D86B00667D62 /* IeoPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AC02721D86B00667D62 /* IeoPhase.swift */; };
+		0DA59AC32721D8FF00667D62 /* EndDateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AC22721D8FF00667D62 /* EndDateClass.swift */; };
+		0DA59AC52721D91A00667D62 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AC42721D91A00667D62 /* Wallet.swift */; };
+		0DA59AC72721DB1500667D62 /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AC62721DB1500667D62 /* Fiat.swift */; };
+		0DA59AC92721DB4E00667D62 /* FiatWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AC82721DB4E00667D62 /* FiatWallet.swift */; };
+		0DA59ACB2721E76C00667D62 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59ACA2721E76C00667D62 /* Bundle+Extension.swift */; };
+		0DA59ACF2721EA2900667D62 /* AssetsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59ACE2721EA2900667D62 /* AssetsScreen.storyboard */; };
+		0DA59AD12721EB7800667D62 /* WalletScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */; };
+		0DA59AD32721EBA800667D62 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AD22721EBA800667D62 /* WalletViewController.swift */; };
+		0DD9ADB42721EED9007EBBF1 /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9ADB32721EED9007EBBF1 /* DataRetriever.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DA59A9A2721D74D00667D62 /* BitPanda_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitPanda_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA59A9D2721D74D00667D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA59A9F2721D74D00667D62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DA59AA12721D74D00667D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DA59AA12721D74D00667D62 /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
 		0DA59AA42721D74D00667D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DA59AA62721D75100667D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA59AA92721D75100667D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA59AAB2721D75100667D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA59AB12721D75800667D62 /* Mastrerdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mastrerdata.json; sourceTree = "<group>"; };
+		0DA59AB32721D7A300667D62 /* MasterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterData.swift; sourceTree = "<group>"; };
+		0DA59AB62721D7DC00667D62 /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		0DA59ABA2721D80800667D62 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		0DA59ABE2721D84800667D62 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		0DA59AC02721D86B00667D62 /* IeoPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IeoPhase.swift; sourceTree = "<group>"; };
+		0DA59AC22721D8FF00667D62 /* EndDateClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndDateClass.swift; sourceTree = "<group>"; };
+		0DA59AC42721D91A00667D62 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		0DA59AC62721DB1500667D62 /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
+		0DA59AC82721DB4E00667D62 /* FiatWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatWallet.swift; sourceTree = "<group>"; };
+		0DA59ACA2721E76C00667D62 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		0DA59ACE2721EA2900667D62 /* AssetsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetsScreen.storyboard; sourceTree = "<group>"; };
+		0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletScreen.storyboard; sourceTree = "<group>"; };
+		0DA59AD22721EBA800667D62 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		0DD9ADB32721EED9007EBBF1 /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +88,60 @@
 			children = (
 				0DA59A9D2721D74D00667D62 /* AppDelegate.swift */,
 				0DA59A9F2721D74D00667D62 /* SceneDelegate.swift */,
-				0DA59AA12721D74D00667D62 /* ViewController.swift */,
-				0DA59AA32721D74D00667D62 /* Main.storyboard */,
-				0DA59AA62721D75100667D62 /* Assets.xcassets */,
 				0DA59AA82721D75100667D62 /* LaunchScreen.storyboard */,
+				0DA59ACC2721E9E100667D62 /* Common */,
+				0DA59ACD2721E9ED00667D62 /* AssetsScreen */,
+				0DA59AD42721EBD900667D62 /* WalletScreen */,
+				0DA59AA62721D75100667D62 /* Assets.xcassets */,
 				0DA59AAB2721D75100667D62 /* Info.plist */,
+				0DA59AB12721D75800667D62 /* Mastrerdata.json */,
 			);
 			path = BitPanda_Test;
+			sourceTree = "<group>";
+		};
+		0DA59AB52721D7AB00667D62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0DA59AB32721D7A300667D62 /* MasterData.swift */,
+				0DA59AB62721D7DC00667D62 /* DataClass.swift */,
+				0DA59ABA2721D80800667D62 /* Asset.swift */,
+				0DA59AC62721DB1500667D62 /* Fiat.swift */,
+				0DA59AC42721D91A00667D62 /* Wallet.swift */,
+				0DA59AC02721D86B00667D62 /* IeoPhase.swift */,
+				0DA59AC22721D8FF00667D62 /* EndDateClass.swift */,
+				0DA59AC82721DB4E00667D62 /* FiatWallet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0DA59ACC2721E9E100667D62 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0DA59AB52721D7AB00667D62 /* Models */,
+				0DA59AA32721D74D00667D62 /* Main.storyboard */,
+				0DA59ABE2721D84800667D62 /* Enums.swift */,
+				0DA59ACA2721E76C00667D62 /* Bundle+Extension.swift */,
+				0DD9ADB32721EED9007EBBF1 /* DataRetriever.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0DA59ACD2721E9ED00667D62 /* AssetsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0DA59AA12721D74D00667D62 /* AssetsViewController.swift */,
+				0DA59ACE2721EA2900667D62 /* AssetsScreen.storyboard */,
+			);
+			path = AssetsScreen;
+			sourceTree = "<group>";
+		};
+		0DA59AD42721EBD900667D62 /* WalletScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0DA59AD22721EBA800667D62 /* WalletViewController.swift */,
+				0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */,
+			);
+			path = WalletScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA59ACF2721EA2900667D62 /* AssetsScreen.storyboard in Resources */,
+				0DA59AB22721D75800667D62 /* Mastrerdata.json in Resources */,
 				0DA59AAA2721D75100667D62 /* LaunchScreen.storyboard in Resources */,
+				0DA59AD12721EB7800667D62 /* WalletScreen.storyboard in Resources */,
 				0DA59AA72721D75100667D62 /* Assets.xcassets in Resources */,
 				0DA59AA52721D74D00667D62 /* Main.storyboard in Resources */,
 			);
@@ -138,8 +218,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA59AA22721D74D00667D62 /* ViewController.swift in Sources */,
+				0DA59AC92721DB4E00667D62 /* FiatWallet.swift in Sources */,
+				0DA59AC52721D91A00667D62 /* Wallet.swift in Sources */,
+				0DA59AA22721D74D00667D62 /* AssetsViewController.swift in Sources */,
+				0DA59ACB2721E76C00667D62 /* Bundle+Extension.swift in Sources */,
+				0DA59AC32721D8FF00667D62 /* EndDateClass.swift in Sources */,
+				0DA59AB42721D7A300667D62 /* MasterData.swift in Sources */,
+				0DA59AB72721D7DC00667D62 /* DataClass.swift in Sources */,
+				0DA59AC12721D86B00667D62 /* IeoPhase.swift in Sources */,
 				0DA59A9E2721D74D00667D62 /* AppDelegate.swift in Sources */,
+				0DD9ADB42721EED9007EBBF1 /* DataRetriever.swift in Sources */,
+				0DA59AD32721EBA800667D62 /* WalletViewController.swift in Sources */,
+				0DA59AC72721DB1500667D62 /* Fiat.swift in Sources */,
+				0DA59ABB2721D80800667D62 /* Asset.swift in Sources */,
+				0DA59ABF2721D84800667D62 /* Enums.swift in Sources */,
 				0DA59AA02721D74D00667D62 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,14 +379,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3KF59NP775;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitPanda_Test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,9 +398,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitpanda.juanColillaTest.BitPanda-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,14 +410,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3KF59NP775;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitPanda_Test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,9 +429,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitpanda.juanColillaTest.BitPanda-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
