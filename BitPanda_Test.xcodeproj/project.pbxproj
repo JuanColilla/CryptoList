@@ -28,6 +28,11 @@
 		0DA59AD12721EB7800667D62 /* WalletScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */; };
 		0DA59AD32721EBA800667D62 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AD22721EBA800667D62 /* WalletViewController.swift */; };
 		0DD9ADB42721EED9007EBBF1 /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9ADB32721EED9007EBBF1 /* DataRetriever.swift */; };
+		0DD9ADB6272209F2007EBBF1 /* AssetsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9ADB5272209F2007EBBF1 /* AssetsCollectionView.swift */; };
+		0DD9ADB827220C1D007EBBF1 /* AssetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9ADB727220C1D007EBBF1 /* AssetCollectionViewCell.swift */; };
+		0DD9ADBA27220C2A007EBBF1 /* FiatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9ADB927220C2A007EBBF1 /* FiatCollectionViewCell.swift */; };
+		0DD9ADBC27221F3C007EBBF1 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD9ADBB27221F3C007EBBF1 /* SectionHeaderView.xib */; };
+		0DD9ADBE27222180007EBBF1 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9ADBD27222180007EBBF1 /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletScreen.storyboard; sourceTree = "<group>"; };
 		0DA59AD22721EBA800667D62 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		0DD9ADB32721EED9007EBBF1 /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
+		0DD9ADB5272209F2007EBBF1 /* AssetsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsCollectionView.swift; sourceTree = "<group>"; };
+		0DD9ADB727220C1D007EBBF1 /* AssetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DD9ADB927220C2A007EBBF1 /* FiatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DD9ADBB27221F3C007EBBF1 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		0DD9ADBD27222180007EBBF1 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		0DA59A9C2721D74D00667D62 /* BitPanda_Test */ = {
 			isa = PBXGroup;
 			children = (
+				0DA59AAB2721D75100667D62 /* Info.plist */,
 				0DA59A9D2721D74D00667D62 /* AppDelegate.swift */,
 				0DA59A9F2721D74D00667D62 /* SceneDelegate.swift */,
 				0DA59AA82721D75100667D62 /* LaunchScreen.storyboard */,
@@ -93,7 +104,6 @@
 				0DA59ACD2721E9ED00667D62 /* AssetsScreen */,
 				0DA59AD42721EBD900667D62 /* WalletScreen */,
 				0DA59AA62721D75100667D62 /* Assets.xcassets */,
-				0DA59AAB2721D75100667D62 /* Info.plist */,
 				0DA59AB12721D75800667D62 /* Mastrerdata.json */,
 			);
 			path = BitPanda_Test;
@@ -129,8 +139,10 @@
 		0DA59ACD2721E9ED00667D62 /* AssetsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				0DA59AA12721D74D00667D62 /* AssetsViewController.swift */,
 				0DA59ACE2721EA2900667D62 /* AssetsScreen.storyboard */,
+				0DD9ADC1272221C7007EBBF1 /* AssetsVC */,
+				0DD9ADC0272221BA007EBBF1 /* AssetsCells */,
+				0DD9ADBF2722218B007EBBF1 /* SectionHeaders */,
 			);
 			path = AssetsScreen;
 			sourceTree = "<group>";
@@ -142,6 +154,33 @@
 				0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */,
 			);
 			path = WalletScreen;
+			sourceTree = "<group>";
+		};
+		0DD9ADBF2722218B007EBBF1 /* SectionHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				0DD9ADBB27221F3C007EBBF1 /* SectionHeaderView.xib */,
+				0DD9ADBD27222180007EBBF1 /* SectionHeader.swift */,
+			);
+			path = SectionHeaders;
+			sourceTree = "<group>";
+		};
+		0DD9ADC0272221BA007EBBF1 /* AssetsCells */ = {
+			isa = PBXGroup;
+			children = (
+				0DD9ADB727220C1D007EBBF1 /* AssetCollectionViewCell.swift */,
+				0DD9ADB927220C2A007EBBF1 /* FiatCollectionViewCell.swift */,
+			);
+			path = AssetsCells;
+			sourceTree = "<group>";
+		};
+		0DD9ADC1272221C7007EBBF1 /* AssetsVC */ = {
+			isa = PBXGroup;
+			children = (
+				0DA59AA12721D74D00667D62 /* AssetsViewController.swift */,
+				0DD9ADB5272209F2007EBBF1 /* AssetsCollectionView.swift */,
+			);
+			path = AssetsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +247,7 @@
 				0DA59AD12721EB7800667D62 /* WalletScreen.storyboard in Resources */,
 				0DA59AA72721D75100667D62 /* Assets.xcassets in Resources */,
 				0DA59AA52721D74D00667D62 /* Main.storyboard in Resources */,
+				0DD9ADBC27221F3C007EBBF1 /* SectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +265,18 @@
 				0DA59AC32721D8FF00667D62 /* EndDateClass.swift in Sources */,
 				0DA59AB42721D7A300667D62 /* MasterData.swift in Sources */,
 				0DA59AB72721D7DC00667D62 /* DataClass.swift in Sources */,
+				0DD9ADBE27222180007EBBF1 /* SectionHeader.swift in Sources */,
 				0DA59AC12721D86B00667D62 /* IeoPhase.swift in Sources */,
 				0DA59A9E2721D74D00667D62 /* AppDelegate.swift in Sources */,
 				0DD9ADB42721EED9007EBBF1 /* DataRetriever.swift in Sources */,
+				0DD9ADB6272209F2007EBBF1 /* AssetsCollectionView.swift in Sources */,
 				0DA59AD32721EBA800667D62 /* WalletViewController.swift in Sources */,
 				0DA59AC72721DB1500667D62 /* Fiat.swift in Sources */,
 				0DA59ABB2721D80800667D62 /* Asset.swift in Sources */,
 				0DA59ABF2721D84800667D62 /* Enums.swift in Sources */,
 				0DA59AA02721D74D00667D62 /* SceneDelegate.swift in Sources */,
+				0DD9ADBA27220C2A007EBBF1 /* FiatCollectionViewCell.swift in Sources */,
+				0DD9ADB827220C1D007EBBF1 /* AssetCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

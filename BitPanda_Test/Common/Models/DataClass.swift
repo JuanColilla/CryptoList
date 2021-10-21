@@ -20,7 +20,7 @@ struct DataAttributes: Codable {
     let cryptocoins, commodities: [Asset]?
     let fiats: [Fiat]?
     let wallets, commodityWallets: [Wallet]?
-    let fiatwallets: [Fiatwallet]?
+    let fiatwallets: [FiatWallet]?
 
     enum CodingKeys: String, CodingKey {
         case cryptocoins, commodities, fiats, wallets

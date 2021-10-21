@@ -30,12 +30,10 @@
         <!--Assets-->
         <scene sceneID="QXu-PH-4Rh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Vu-aX-DLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2jF-6G-jds" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2jF-6G-jds" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Assets" image="bitcoinsign.circle.fill" catalog="system" id="O7Z-xs-1BS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wbV-lk-s3h">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -43,6 +41,7 @@
                         <segue destination="5Yg-XH-11D" kind="relationship" relationship="rootViewController" id="3oJ-8F-wy4"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Vu-aX-DLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1159.4202898550725" y="750.66964285714278"/>
         </scene>
@@ -56,12 +55,11 @@
             </objects>
             <point key="canvasLocation" x="-1159" y="1205"/>
         </scene>
-        <!--Wallet-->
+        <!--Wallets-->
         <scene sceneID="ZJA-AL-miN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PSK-7i-M7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sL0-FW-GKG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Wallet" image="rectangle.stack.fill" catalog="system" id="Lzw-9Y-1qK"/>
+                    <tabBarItem key="tabBarItem" title="Wallets" image="rectangle.stack.fill" catalog="system" id="Lzw-9Y-1qK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4f9-Wl-mlv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -72,6 +70,7 @@
                         <segue destination="ofu-bS-Fqp" kind="relationship" relationship="rootViewController" id="15W-MM-uty"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSK-7i-M7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413.04347826086962" y="750.66964285714278"/>
         </scene>
