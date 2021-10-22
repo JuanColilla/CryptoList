@@ -17,10 +17,10 @@ struct DataClass: Codable {
 
 // MARK: - DataAttributes
 struct DataAttributes: Codable {
-    let cryptocoins, commodities: [Asset]?
+    let cryptocoins, commodities: [Commodity]?
     let fiats: [Fiat]?
     let wallets, commodityWallets: [Wallet]?
-    let fiatwallets: [FiatWallet]?
+    let fiatwallets: [Fiatwallet]?
 
     enum CodingKeys: String, CodingKey {
         case cryptocoins, commodities, fiats, wallets

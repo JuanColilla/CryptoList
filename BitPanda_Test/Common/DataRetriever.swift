@@ -9,7 +9,7 @@ import Foundation
 
 class DataRetriever {
     
-    let shared = DataRetriever()
+    static let shared = DataRetriever()
     
     var masterData: [Masterdata]
     
@@ -17,12 +17,12 @@ class DataRetriever {
         self.masterData = Bundle.main.decode("Masterdata.json")
     }
     
-    func getCrypto() -> [Asset] {
-        return masterData[0].data?.attributes?.cryptocoins ?? [Asset]()
+    func getCrypto() -> [Commodity] {
+        return masterData[0].data?.attributes?.cryptocoins ?? [Commodity]()
     }
     
-    func getCommodities() -> [Asset] {
-        return masterData[0].data?.attributes?.commodities ?? [Asset]()
+    func getCommodities() -> [Commodity] {
+        return masterData[0].data?.attributes?.commodities ?? [Commodity]()
     }
     
     func getFiats() -> [Fiat] {
@@ -37,8 +37,8 @@ class DataRetriever {
         return masterData[0].data?.attributes?.commodityWallets ?? [Wallet]()
     }
     
-    func getFiatWallets() -> [FiatWallet] {
-        return masterData[0].data?.attributes?.fiatwallets ?? [FiatWallet]()
+    func getFiatWallets() -> [Fiatwallet] {
+        return masterData[0].data?.attributes?.fiatwallets ?? [Fiatwallet]()
     }
 
 }

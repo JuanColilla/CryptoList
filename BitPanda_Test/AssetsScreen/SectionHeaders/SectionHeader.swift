@@ -11,6 +11,13 @@ class SectionHeader: UICollectionReusableView {
     
     static let identifier = "SectionHeader"
     
-    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func configureHeader(title: String) {
+        self.titleLabel.text = title
+    }
 }

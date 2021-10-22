@@ -11,7 +11,7 @@
 import Foundation
 
 // MARK: - Fiatwallet
-struct FiatWallet: Codable {
+struct Fiatwallet: Codable {
     let type: String?
     let attributes: FiatwalletAttributes?
     let id: String?

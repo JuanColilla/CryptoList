@@ -9,8 +9,15 @@ import UIKit
 
 class AssetsViewController: UIViewController {
     
+    let viewModel = AssetsScreenViewModel()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var filterSelector: UISegmentedControl!
+    
+    @IBAction func filterApplied(_ sender: UISegmentedControl) {
+        collectionView.reloadData()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +28,6 @@ class AssetsViewController: UIViewController {
     
     func setupNavBar() {
         self.title = "Assets"
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -39,8 +44,6 @@ class AssetsViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.showsVerticalScrollIndicator = false
-        
-        //collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.identifier)
     }
     
 

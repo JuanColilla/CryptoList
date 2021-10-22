@@ -22,13 +22,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EeN-h4-2D1">
                                     <size key="itemSize" width="374" height="82"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fiatCell" id="eBj-Tf-cZH" customClass="FiatCollectionViewCell" customModule="BitPanda_Test" customModuleProvider="target">
-                                        <rect key="frame" x="4.5" y="0.0" width="365" height="80"/>
+                                        <rect key="frame" x="4.5" y="50" width="365" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZGz-VS-AVs">
                                             <rect key="frame" x="0.0" y="0.0" width="365" height="80"/>
@@ -75,7 +75,7 @@
                                         <size key="customSize" width="365" height="80"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="assetCell" id="U4i-TI-mZq" customClass="AssetCollectionViewCell" customModule="BitPanda_Test" customModuleProvider="target">
-                                        <rect key="frame" x="4.5" y="90" width="365" height="80"/>
+                                        <rect key="frame" x="4.5" y="140" width="365" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JYx-dK-5Bu">
                                             <rect key="frame" x="0.0" y="0.0" width="365" height="80"/>
@@ -137,6 +137,29 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionHeader" id="Co3-4D-A4s" customClass="SectionHeader" customModule="BitPanda_Test" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-HN-cQp">
+                                            <rect key="frame" x="8" y="13" width="150" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="K3f-N0-2Yp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OoB-HN-cQp" firstAttribute="leading" secondItem="Co3-4D-A4s" secondAttribute="leadingMargin" id="4Uh-KC-1G8"/>
+                                        <constraint firstItem="OoB-HN-cQp" firstAttribute="top" secondItem="Co3-4D-A4s" secondAttribute="topMargin" constant="5" id="HGM-lO-YgQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OoB-HN-cQp" secondAttribute="bottom" constant="5" id="m69-N9-87V"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="OoB-HN-cQp" id="qgq-Ua-0kO"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -150,17 +173,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="xns-0N-iqG">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" id="DQD-FL-fzH">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" id="DQD-FL-fzH">
+                            <rect key="frame" x="87.5" y="6" width="239" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="275" id="WQQ-sN-3KF"/>
-                            </constraints>
                             <segments>
                                 <segment title="All"/>
                                 <segment title="Crypto"/>
                                 <segment title="Commodities"/>
                                 <segment title="Fiat"/>
                             </segments>
+                            <connections>
+                                <action selector="filterApplied:" destination="Y6W-OH-hqX" eventType="valueChanged" id="kbc-VY-ztW"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
