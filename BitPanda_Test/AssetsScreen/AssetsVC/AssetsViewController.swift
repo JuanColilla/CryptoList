@@ -22,7 +22,7 @@ class AssetsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-        setupStatusBar()
+        //setupStatusBar()
         ownCollectionView()
     }
     

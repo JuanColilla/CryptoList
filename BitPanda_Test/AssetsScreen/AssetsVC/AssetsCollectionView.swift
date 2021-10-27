@@ -11,7 +11,6 @@ import UIKit
 extension AssetsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // Number of Cells for Section
         if filterSelector.selectedSegmentIndex == 0 {
             if section == 0 {
                 return viewModel.getCrypto().count
@@ -20,44 +19,57 @@ extension AssetsViewController: UICollectionViewDelegate, UICollectionViewDataSo
             } else {
                 return viewModel.getFiat().count
             }
+        } else if filterSelector.selectedSegmentIndex == 1 {
+            return viewModel.getCrypto().count
+        } else if filterSelector.selectedSegmentIndex == 2 {
+            return viewModel.getCommodities().count
+        } else if filterSelector.selectedSegmentIndex == 3 {
+            return viewModel.getFiat().count
         } else {
             return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // Cell For Row At
         if filterSelector.selectedSegmentIndex == 0 {
             if indexPath.section == 0 {
                 guard let cryptoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
                     return UICollectionViewCell()
                 }
-                
+                cryptoCell.configureCell(asset: viewModel.getCrypto()[indexPath.row])
                 return cryptoCell
             } else if indexPath.section == 1 {
                 guard let commodityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
                     return UICollectionViewCell()
                 }
-                
+                commodityCell.configureCell(asset: viewModel.getCommodities()[indexPath.row])
                 return commodityCell
             } else {
                 guard let fiatCell = collectionView.dequeueReusableCell(withReuseIdentifier: "fiatCell", for: indexPath) as? FiatCollectionViewCell else {
                     return UICollectionViewCell()
                 }
-                
+                fiatCell.configureCell(fiat: viewModel.getFiat()[indexPath.row])
                 return fiatCell
             }
         } else {
             switch(filterSelector.selectedSegmentIndex) {
-            case 1, 2:
+            case 1:
                 guard let cryptoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
                     return UICollectionViewCell()
                 }
+                cryptoCell.configureCell(asset: viewModel.getCrypto()[indexPath.row])
                 return cryptoCell
+            case 2:
+                guard let commodityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
+                    return UICollectionViewCell()
+                }
+                commodityCell.configureCell(asset: viewModel.getCommodities()[indexPath.row])
+                return commodityCell
             case 3:
                 guard let fiatCell = collectionView.dequeueReusableCell(withReuseIdentifier: "fiatCell", for: indexPath) as? FiatCollectionViewCell else {
                     return UICollectionViewCell()
                 }
+                fiatCell.configureCell(fiat: viewModel.getFiat()[indexPath.row])
                 return fiatCell
             default:
                 print("Default case at \(#function)")
@@ -68,7 +80,6 @@ extension AssetsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // How many Sections
         if filterSelector.selectedSegmentIndex == 0 {
             return 3
         } else {
@@ -106,7 +117,8 @@ extension AssetsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 365, height: 80)
+        let screen = UIScreen.main.bounds
+        return CGSize(width: screen.width * 0.9, height: screen.height * 0.1)
     }
     
 }

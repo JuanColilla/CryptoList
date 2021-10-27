@@ -11,15 +11,21 @@ import Foundation
 class AssetsScreenViewModel {
     
 
-    func getCrypto() -> [Commodity] {
+    func getCrypto() -> [Asset] {
         return DataRetriever.shared.getCrypto()
     }
     
-    func getCommodities() -> [Commodity] {
+    func getCommodities() -> [Asset] {
         return DataRetriever.shared.getCommodities()
     }
     
-    func getFiat() -> [Fiat] {
-        return DataRetriever.shared.getFiats()
+    func getFiat() -> [Asset] {
+        var fiatToShow: [Asset] = [Asset]()
+        for fiat in DataRetriever.shared.getFiats() {
+            if fiat.hasWallets ?? false {
+                fiatToShow.append(fiat)
+            }
+        }
+        return fiatToShow
     }
 }

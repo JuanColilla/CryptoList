@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVGKit
 
 class AssetCollectionViewCell: UICollectionViewCell {
     
@@ -14,12 +15,18 @@ class AssetCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var assetSymbol: UILabel!
     @IBOutlet weak var assetAveragePrice: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    func configureCell() {
 
+    func configureCell(asset: Asset) {
+        DispatchQueue.main.async { [weak self] in
+            if self?.traitCollection.userInterfaceStyle == .light {
+                self?.assetImageView.image = SVGKImage(contentsOf: URL(string: asset.iconWhite)).uiImage
+            } else {
+                self?.assetImageView.image = SVGKImage(contentsOf: URL(string: asset.iconBlack)).uiImage
+            }
+            self?.assetName.text = asset.name
+            self?.assetSymbol.text = asset.symbol
+            self?.assetAveragePrice.text = "\(String(Double(asset.averagePrice ?? "0.00")?.rounded(toPlaces: asset.precision) ?? 0.00))€"
+        }
     }
     
 }

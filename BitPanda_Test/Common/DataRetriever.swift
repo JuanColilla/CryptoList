@@ -11,34 +11,34 @@ class DataRetriever {
     
     static let shared = DataRetriever()
     
-    var masterData: [Masterdata]
+    var masterData: MasterPayloadFileData
     
     private init() {
-        self.masterData = Bundle.main.decode("Masterdata.json")
+        self.masterData = Bundle.main.decode(MasterPayloadFileData.self, from: "Masterdata.json")
     }
     
-    func getCrypto() -> [Commodity] {
-        return masterData[0].data?.attributes?.cryptocoins ?? [Commodity]()
+    func getCrypto() -> [Asset] {
+        return masterData.data.attributes.cryptocoins
     }
     
-    func getCommodities() -> [Commodity] {
-        return masterData[0].data?.attributes?.commodities ?? [Commodity]()
+    func getCommodities() -> [Asset] {
+        return masterData.data.attributes.commodities
     }
-    
-    func getFiats() -> [Fiat] {
-        return masterData[0].data?.attributes?.fiats ?? [Fiat]()
+
+    func getFiats() -> [Asset] {
+        return masterData.data.attributes.fiats
     }
-    
+
     func getWallets() -> [Wallet] {
-        return masterData[0].data?.attributes?.wallets ?? [Wallet]()
+        return masterData.data.attributes.wallets
     }
-    
+
     func getCommoditiesWallets() -> [Wallet] {
-        return masterData[0].data?.attributes?.commodityWallets ?? [Wallet]()
+        return masterData.data.attributes.comoditiesWallets
     }
-    
-    func getFiatWallets() -> [Fiatwallet] {
-        return masterData[0].data?.attributes?.fiatwallets ?? [Fiatwallet]()
+
+    func getFiatWallets() -> [Wallet] {
+        return masterData.data.attributes.fialWallets
     }
 
 }
