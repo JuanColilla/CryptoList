@@ -20,7 +20,7 @@
 		0DA59ACF2721EA2900667D62 /* AssetsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59ACE2721EA2900667D62 /* AssetsScreen.storyboard */; };
 		0DA59AD12721EB7800667D62 /* WalletScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */; };
 		0DA59AD32721EBA800667D62 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA59AD22721EBA800667D62 /* WalletViewController.swift */; };
-		0DA7099127238E2100415D47 /* Masterdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7099027238E2100415D47 /* Masterdata.swift */; };
+		0DA7099127238E2100415D47 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7099027238E2100415D47 /* Datasource.swift */; };
 		0DA70994272394C600415D47 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA70993272394C600415D47 /* UIImageView+Extension.swift */; };
 		0DC49D31272323AE00E2ACDB /* AssetsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC49D30272323AE00E2ACDB /* AssetsScreenViewModel.swift */; };
 		0DD9ADB42721EED9007EBBF1 /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9ADB32721EED9007EBBF1 /* DataRetriever.swift */; };
@@ -47,7 +47,7 @@
 		0DA59ACE2721EA2900667D62 /* AssetsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetsScreen.storyboard; sourceTree = "<group>"; };
 		0DA59AD02721EB7800667D62 /* WalletScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletScreen.storyboard; sourceTree = "<group>"; };
 		0DA59AD22721EBA800667D62 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
-		0DA7099027238E2100415D47 /* Masterdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masterdata.swift; sourceTree = "<group>"; };
+		0DA7099027238E2100415D47 /* Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		0DA70993272394C600415D47 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		0DC49D30272323AE00E2ACDB /* AssetsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsScreenViewModel.swift; sourceTree = "<group>"; };
 		0DD9ADB32721EED9007EBBF1 /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		0DA59AB52721D7AB00667D62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0DA7099027238E2100415D47 /* Masterdata.swift */,
+				0DA7099027238E2100415D47 /* Datasource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,7 +189,6 @@
 				24A5E461F06994598463E7DD /* Pods-BitPanda_Test.debug.xcconfig */,
 				F19BAE164D6AB6AAB7DFC42F /* Pods-BitPanda_Test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -329,7 +328,7 @@
 				0DA59A9E2721D74D00667D62 /* AppDelegate.swift in Sources */,
 				0DD9ADB42721EED9007EBBF1 /* DataRetriever.swift in Sources */,
 				0DD9ADB6272209F2007EBBF1 /* AssetsCollectionView.swift in Sources */,
-				0DA7099127238E2100415D47 /* Masterdata.swift in Sources */,
+				0DA7099127238E2100415D47 /* Datasource.swift in Sources */,
 				0DA59AD32721EBA800667D62 /* WalletViewController.swift in Sources */,
 				0DA59AA02721D74D00667D62 /* SceneDelegate.swift in Sources */,
 				0DD9ADBA27220C2A007EBBF1 /* FiatCollectionViewCell.swift in Sources */,
