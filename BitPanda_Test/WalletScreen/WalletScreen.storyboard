@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="32w-9L-gg9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,18 +17,177 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k72-L2-pOd">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="axo-ux-YeV">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="walletCell" id="fc3-hs-Dnu" customClass="WalletCollectionViewCell" customModule="BitPanda_Test" customModuleProvider="target">
+                                        <rect key="frame" x="4.5" y="50" width="365" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sij-CH-L7L">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet.pass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YTx-d3-Nbl">
+                                                    <rect key="frame" x="8" y="17.5" width="45" height="45"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="eoa-eq-ASJ"/>
+                                                        <constraint firstAttribute="height" constant="45" id="lvg-eE-k8Z"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="1ca-5G-zQL">
+                                                    <rect key="frame" x="63" y="30.5" width="80" height="19.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="175" id="BH4-Hj-jUN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="678-fg-S3n">
+                                                    <rect key="frame" x="150" y="31" width="29.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKE-XE-vPo">
+                                                    <rect key="frame" x="327.5" y="30.5" width="29.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELN-SR-N0z">
+                                                    <rect key="frame" x="313.5" y="5" width="46.5" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knf-SD-twk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="28.5" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rosette" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qem-Zw-lUf">
+                                                            <rect key="frame" x="28.5" y="-1" width="18" height="21"/>
+                                                            <color key="tintColor" systemColor="systemYellowColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="WFI-Ug-VlC"/>
+                                                                <constraint firstAttribute="width" constant="18" id="aa1-NX-KNl"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEFAULT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gik-FU-aSz">
+                                                    <rect key="frame" x="304.5" y="57.5" width="52.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ELN-SR-N0z" secondAttribute="trailing" constant="5" id="76r-I3-cJi"/>
+                                                <constraint firstItem="YTx-d3-Nbl" firstAttribute="centerY" secondItem="sij-CH-L7L" secondAttribute="centerY" id="DBb-FC-4We"/>
+                                                <constraint firstItem="ELN-SR-N0z" firstAttribute="top" secondItem="sij-CH-L7L" secondAttribute="top" constant="5" id="DnQ-TY-TBV"/>
+                                                <constraint firstItem="1ca-5G-zQL" firstAttribute="centerY" secondItem="sij-CH-L7L" secondAttribute="centerY" id="Eou-Jn-2Mi"/>
+                                                <constraint firstItem="eKE-XE-vPo" firstAttribute="centerY" secondItem="sij-CH-L7L" secondAttribute="centerY" id="FK3-Al-lBl"/>
+                                                <constraint firstItem="678-fg-S3n" firstAttribute="centerY" secondItem="sij-CH-L7L" secondAttribute="centerY" id="Tcu-CF-fTt"/>
+                                                <constraint firstAttribute="trailing" secondItem="eKE-XE-vPo" secondAttribute="trailing" constant="8" id="UXf-j6-grB"/>
+                                                <constraint firstAttribute="bottom" secondItem="gik-FU-aSz" secondAttribute="bottom" constant="8" id="XtN-DU-9cB"/>
+                                                <constraint firstItem="678-fg-S3n" firstAttribute="leading" secondItem="1ca-5G-zQL" secondAttribute="trailing" constant="7" id="aMs-sP-5jN"/>
+                                                <constraint firstItem="YTx-d3-Nbl" firstAttribute="leading" secondItem="sij-CH-L7L" secondAttribute="leading" constant="8" id="bE2-F4-Svx"/>
+                                                <constraint firstAttribute="trailing" secondItem="gik-FU-aSz" secondAttribute="trailing" constant="8" id="e97-Ee-018"/>
+                                                <constraint firstItem="1ca-5G-zQL" firstAttribute="leading" secondItem="YTx-d3-Nbl" secondAttribute="trailing" constant="10" id="eLJ-Pz-TJZ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="365" height="80"/>
+                                        <connections>
+                                            <outlet property="defaultLabel" destination="gik-FU-aSz" id="IXW-TC-3z3"/>
+                                            <outlet property="walletBalance" destination="eKE-XE-vPo" id="Y3H-Q8-RKd"/>
+                                            <outlet property="walletFiatIndicator" destination="ELN-SR-N0z" id="oY2-xj-Ivq"/>
+                                            <outlet property="walletImageView" destination="YTx-d3-Nbl" id="OJF-98-Gk8"/>
+                                            <outlet property="walletName" destination="1ca-5G-zQL" id="hF4-oa-K8U"/>
+                                            <outlet property="walletSymbol" destination="678-fg-S3n" id="aEC-g2-lNL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="8Zm-Mh-b6z" customClass="SectionHeader" customModule="BitPanda_Test" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlA-ut-BBI">
+                                            <rect key="frame" x="8" y="13" width="50" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zlA-ut-BBI" firstAttribute="centerY" secondItem="8Zm-Mh-b6z" secondAttribute="centerY" id="nng-gc-d6W"/>
+                                        <constraint firstItem="zlA-ut-BBI" firstAttribute="leading" secondItem="8Zm-Mh-b6z" secondAttribute="leadingMargin" id="xAT-yj-oNS"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="zlA-ut-BBI" id="CgH-yx-mwY"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="k72-L2-pOd" secondAttribute="trailing" constant="20" id="GaQ-pZ-V9L"/>
+                            <constraint firstItem="k72-L2-pOd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Pyb-9f-rDO"/>
+                            <constraint firstItem="k72-L2-pOd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ZXv-PH-2Jz"/>
+                            <constraint firstItem="k72-L2-pOd" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="iKv-HR-j4E"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7cp-7P-8WQ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="k72-L2-pOd" id="9V2-Nd-qXT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="117"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oHj-OI-Tuc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="32w-9L-gg9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPK-PI-r8r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="auB-eR-9HV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VjX-sN-F69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
+        <image name="rosette" catalog="system" width="106" height="128"/>
+        <image name="wallet.pass" catalog="system" width="115" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.39215686274509803" green="0.80784313725490198" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

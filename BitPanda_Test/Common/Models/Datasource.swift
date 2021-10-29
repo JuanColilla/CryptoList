@@ -1,5 +1,5 @@
 //
-//  Masterdata.swift
+//  Datasource.swift
 //  BitPanda_Test
 //
 //  Created by Juan Colilla on 21/10/21.
@@ -7,16 +7,16 @@
 
 import Foundation
 
-public struct MasterPayloadFileData: Decodable {
+struct MasterPayloadFileData: Decodable {
     let data: MasterPayloadData
 }
 
-public struct MasterPayloadData: Decodable {
+struct MasterPayloadData: Decodable {
     let type: String
     let attributes: MasterData
 }
 
-public struct MasterData: Decodable {
+struct MasterData: Decodable {
     let cryptocoins: [Asset]
     let commodities: [Asset]
     let fiats: [Asset]
@@ -34,13 +34,13 @@ public struct MasterData: Decodable {
     }
 }
 
-public enum AssetType: String, Decodable, CaseIterable {
+enum AssetType: String, Decodable, CaseIterable {
     case cryptocoin
     case commodity
     case fiat
 }
     
-public struct Asset: Decodable {
+struct Asset: Decodable {
     let id: String
     let type: AssetType
     let iconWhite: String
@@ -95,12 +95,12 @@ public struct Asset: Decodable {
     }
 }
 
-public enum WalletType: String, Decodable, CaseIterable {
+enum WalletType: String, Decodable, CaseIterable {
     case wallet
     case fiatWallet = "fiat_wallet"
 }
 
-public struct Wallet: Decodable {
+class Wallet: Decodable {
     let id: String
     let type: WalletType
     let name: String
@@ -108,7 +108,8 @@ public struct Wallet: Decodable {
     let balance: String
     let isDeleted: Bool
     let isDefault: Bool
-    let icon: String?
+    var iconWhite: String?
+    var iconBlack: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -123,14 +124,14 @@ public struct Wallet: Decodable {
         case balance
         case isDeleted = "deleted"
         case isDefault = "is_default"
-        case icon
+        case iconWhite
+        case iconBlack
     }
     
-    public init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(String.self, forKey: .id)
         type = try values.decode(WalletType.self, forKey: .type)
-        
         let attributes = try values.nestedContainer(keyedBy: AttributesKeys.self, forKey: .attributes)
         name = try attributes.decode(String.self, forKey: .name)
         let symbolStr = try attributes.decodeIfPresent(String.self, forKey: .symbol)
@@ -140,7 +141,8 @@ public struct Wallet: Decodable {
         balance = balanceString
         isDeleted = try attributes.decodeIfPresent(Bool.self, forKey: .isDeleted) ?? false
         isDefault = try attributes.decodeIfPresent(Bool.self, forKey: .isDefault) ?? false
-        icon = nil
+        iconWhite = nil
+        iconBlack = nil
     }
 }
 

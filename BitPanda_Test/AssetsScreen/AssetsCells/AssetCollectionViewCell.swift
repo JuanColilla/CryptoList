@@ -25,8 +25,12 @@ class AssetCollectionViewCell: UICollectionViewCell {
             }
             self?.assetName.text = asset.name
             self?.assetSymbol.text = asset.symbol
-            self?.assetAveragePrice.text = "\(String(Double(asset.averagePrice ?? "0.00")?.rounded(toPlaces: asset.precision) ?? 0.00))€"
+            self?.assetAveragePrice.text = "\(String(Double(asset.averagePrice ?? "0.00")?.rounded(toPlaces: asset.precision) ?? 0.00))".localizedPrice()
         }
+    }
+    
+    override func prepareForReuse() {
+        assetImageView.image = nil
     }
     
 }

@@ -33,19 +33,19 @@ extension AssetsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if filterSelector.selectedSegmentIndex == 0 {
             if indexPath.section == 0 {
-                guard let cryptoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
+                guard let cryptoCell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCryptoCell, for: indexPath) as? AssetCollectionViewCell else {
                     return UICollectionViewCell()
                 }
                 cryptoCell.configureCell(asset: viewModel.getCrypto()[indexPath.row])
                 return cryptoCell
             } else if indexPath.section == 1 {
-                guard let commodityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
+                guard let commodityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCryptoCell, for: indexPath) as? AssetCollectionViewCell else {
                     return UICollectionViewCell()
                 }
                 commodityCell.configureCell(asset: viewModel.getCommodities()[indexPath.row])
                 return commodityCell
             } else {
-                guard let fiatCell = collectionView.dequeueReusableCell(withReuseIdentifier: "fiatCell", for: indexPath) as? FiatCollectionViewCell else {
+                guard let fiatCell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableFiatCell, for: indexPath) as? FiatCollectionViewCell else {
                     return UICollectionViewCell()
                 }
                 fiatCell.configureCell(fiat: viewModel.getFiat()[indexPath.row])
@@ -54,19 +54,19 @@ extension AssetsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         } else {
             switch(filterSelector.selectedSegmentIndex) {
             case 1:
-                guard let cryptoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
+                guard let cryptoCell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCryptoCell, for: indexPath) as? AssetCollectionViewCell else {
                     return UICollectionViewCell()
                 }
                 cryptoCell.configureCell(asset: viewModel.getCrypto()[indexPath.row])
                 return cryptoCell
             case 2:
-                guard let commodityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "assetCell", for: indexPath) as? AssetCollectionViewCell else {
+                guard let commodityCell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCryptoCell, for: indexPath) as? AssetCollectionViewCell else {
                     return UICollectionViewCell()
                 }
                 commodityCell.configureCell(asset: viewModel.getCommodities()[indexPath.row])
                 return commodityCell
             case 3:
-                guard let fiatCell = collectionView.dequeueReusableCell(withReuseIdentifier: "fiatCell", for: indexPath) as? FiatCollectionViewCell else {
+                guard let fiatCell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableFiatCell, for: indexPath) as? FiatCollectionViewCell else {
                     return UICollectionViewCell()
                 }
                 fiatCell.configureCell(fiat: viewModel.getFiat()[indexPath.row])

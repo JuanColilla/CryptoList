@@ -22,4 +22,8 @@ class FiatCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        fiatImageView.image = nil
+    }
+    
 }

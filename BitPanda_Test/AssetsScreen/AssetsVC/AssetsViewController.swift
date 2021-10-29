@@ -10,6 +10,8 @@ import UIKit
 class AssetsViewController: UIViewController {
     
     let viewModel = AssetsScreenViewModel()
+    let reusableCryptoCell = "assetCell"
+    let reusableFiatCell = "fiatCell"
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var filterSelector: UISegmentedControl!
@@ -42,7 +44,6 @@ class AssetsViewController: UIViewController {
     func ownCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         collectionView.showsVerticalScrollIndicator = false
     }
     
